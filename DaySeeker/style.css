@@ -35,6 +35,30 @@ a {
     color: var(--secondary);
   }
 
+  
+button {
+  border: 2px solid var(--secondary);
+  padding: 5px 10px;
+  background-color: transparent;
+  text-transform: uppercase;
+  filter: invert(100%);
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+
+.view_all {
+  display: flex;
+  justify-content: center;
+}
+
+
  .social {
     
     display: flex;
@@ -75,10 +99,21 @@ header {
   align-items: center;
   gap: 10px;
   background-size: cover;
+  animation: entrance 3s;
 }
 
 header > img {
   width: auto;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    }
+
+  100% {
+    opacity: 1;
+    }
 }
 
 /* MAIN */
@@ -150,16 +185,19 @@ iframe{
   
   .foot_div_2 {
     padding-right: 20px;
+    padding-bottom: 20px;
     flex-direction:row;
   }
 
   .foot_div_21{
     padding-left: 180px;
+    padding-bottom: 20px;
   }
 
  
   input {
   padding: 10px 45px 10px 0;
+  /*padding: 10px 85px 10px 0;*/
   background-color: #131313;
   width: 300px;
   height: ;: auto;
